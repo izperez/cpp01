@@ -6,21 +6,21 @@
 /*   By: izperez <izperez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 10:22:38 by izperez           #+#    #+#             */
-/*   Updated: 2024/12/27 11:29:13 by izperez          ###   ########.fr       */
+/*   Updated: 2024/12/27 13:12:32 by izperez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
 Zombie::Zombie(std::string name): name(name){
-	std::cout << name << " created!" << std::endl;
+	std::cout << "\033[32m" << this->name << " created!" << "\033[0m" << std::endl;
 }
 
 Zombie::~Zombie(){
-	std::cout << name << " destroyed!" << std::endl;
+	std::cout << "\033[31m" << this->name << " destroyed!" << "\033[0m" << std::endl;
 }
 
-void	Zombie::ft_announce()
+void	Zombie::announce()
 {
 	std::cout <<  name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: izperez <izperez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 10:20:30 by izperez           #+#    #+#             */
-/*   Updated: 2024/12/27 11:20:00 by izperez          ###   ########.fr       */
+/*   Updated: 2024/12/27 11:56:11 by izperez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Zombie
 		Zombie();
 		~Zombie();
 		Zombie (std::string name);
-		void	ft_announce();
+		void	announce();
 
 	private:
 		std::string name;

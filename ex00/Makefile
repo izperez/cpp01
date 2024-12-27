@@ -6,7 +6,7 @@
 #    By: izperez <izperez@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/27 10:11:42 by izperez           #+#    #+#              #
-#    Updated: 2024/12/27 11:29:47 by izperez          ###   ########.fr        #
+#    Updated: 2024/12/27 13:18:28 by izperez          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,19 +22,19 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 		$(CC) $(CFLAGS) -o $(NAME) $(OBJS) -I.
-		@echo "OK Compiled!"
+		@echo "\033[32mOK Compiled!\033[0m"
 
 $(OBJS): $(SRCS)
 		$(CC) $(CFLAGS) -c $(SRCS)
-		@echo "Objets $@ created!!"
+		@echo "\033[32mObjets $@ created!\033[0m!"
 
 clean:
 		rm -rf $(OBJS)
-		@echo "Objets destroyed!"
+		@echo "\033[31mObjets destroyed!\033[0m"
 
 fclean:
 		rm -rf $(NAME)
-		@echo "Executable Destroyed!"
+		@echo "\033[31mExecutable Destroyed!\033[0m"
 
 re: fclean all
 
