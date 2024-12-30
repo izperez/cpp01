@@ -6,7 +6,7 @@
 /*   By: izperez <izperez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 11:38:31 by izperez           #+#    #+#             */
-/*   Updated: 2024/12/27 13:04:41 by izperez          ###   ########.fr       */
+/*   Updated: 2024/12/29 13:49:52 by izperez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ Zombie* zombieHorde( int N, std::string name )
 	int	i = 0;
 	while (i < N)
 	{
-		z_horde[i] = Zombie(name);
-		i++;
+		z_horde[i].setName(name);
+ 		i++;
 	}
 	return (z_horde);
 }

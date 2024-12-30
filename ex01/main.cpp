@@ -6,7 +6,7 @@
 /*   By: izperez <izperez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 12:03:41 by izperez           #+#    #+#             */
-/*   Updated: 2024/12/27 13:10:30 by izperez          ###   ########.fr       */
+/*   Updated: 2024/12/29 13:47:24 by izperez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ int	main()
 		zombie_horde[i].announce();
 		i++;
 	}
-	delete[] (zombie_horde);
+	delete [] zombie_horde;
 	return (0);
 }
