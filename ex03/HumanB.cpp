@@ -6,7 +6,7 @@
 /*   By: izperez <izperez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/29 14:53:14 by izperez           #+#    #+#             */
-/*   Updated: 2024/12/30 12:14:04 by izperez          ###   ########.fr       */
+/*   Updated: 2025/01/21 10:31:12 by izperez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	HumanB::attack()
 		std::cout << "HumanB; " << this->name << " has no weapon " << std::endl;
 }
 
-void	HumanB::setWeapon(Weapon type)
+void	HumanB::setWeapon(Weapon &type)
 {
 	this->weapon = &type;
 }

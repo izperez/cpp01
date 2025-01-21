@@ -6,7 +6,7 @@
 #    By: izperez <izperez@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/27 10:11:42 by izperez           #+#    #+#              #
-#    Updated: 2024/12/27 13:18:28 by izperez          ###   ########.fr        #
+#    Updated: 2025/01/15 13:04:43 by izperez          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = ex00
 CC = g++ #clang++
 CFLAGS = -Wall -Werror -Wextra -std=c++98
 INCLUDE = Zombie.hpp
-SRCS = Zombie.cpp NewZombie.cpp randomChump.cpp main.cpp
+SRCS = Zombie.cpp newZombie.cpp randomChump.cpp main.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 .SILENT:
@@ -23,6 +23,10 @@ all: $(NAME)
 $(NAME): $(OBJS)
 		$(CC) $(CFLAGS) -o $(NAME) $(OBJS) -I.
 		@echo "\033[32mOK Compiled!\033[0m"
+
+# %.o: %.cpp
+# 	$(CC) $(CFLAGS) -c $< -o $@
+# 	@echo "\033[32mObjet $@ created!\033[0m"
 
 $(OBJS): $(SRCS)
 		$(CC) $(CFLAGS) -c $(SRCS)

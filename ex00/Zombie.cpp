@@ -6,13 +6,14 @@
 /*   By: izperez <izperez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 10:22:38 by izperez           #+#    #+#             */
-/*   Updated: 2024/12/27 13:12:32 by izperez          ###   ########.fr       */
+/*   Updated: 2025/01/15 13:03:23 by izperez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string name): name(name){
+Zombie::Zombie(std::string name): name("Unnamed"){
+	(void) name;
 	std::cout << "\033[32m" << this->name << " created!" << "\033[0m" << std::endl;
 }
 

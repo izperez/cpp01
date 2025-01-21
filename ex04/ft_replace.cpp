@@ -6,7 +6,7 @@
 /*   By: izperez <izperez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 12:56:53 by izperez           #+#    #+#             */
-/*   Updated: 2024/12/31 11:36:12 by izperez          ###   ########.fr       */
+/*   Updated: 2025/01/21 12:13:05 by izperez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 bool	ft_error(std::string &filename, std::string &s1, std::string &s2)
 {
-	std::ifstream inputFile(filename);
+	std::ifstream inputFile(filename.c_str());
 
 	if (s1.empty() || s2.empty() || filename.empty())
 	{
@@ -26,7 +26,7 @@ bool	ft_error(std::string &filename, std::string &s1, std::string &s2)
 		std::cerr << "error: input file cannot be open!" << std::endl;
 		return (false);
 	}
-	std::ofstream outputFile(filename + ".replace");
+	std::ofstream outputFile((filename + ".replace").c_str());
 	if (!outputFile.is_open())
 	{
 		std::cerr << "error: output file cannot be created!" << std::endl;
@@ -36,10 +36,10 @@ bool	ft_error(std::string &filename, std::string &s1, std::string &s2)
 	return (true);
 }
 
-std::ofstream	ft_replace(std::string &filename, std::string &s1, std::string &s2)
+void	ft_replace(std::string &filename, std::string &s1, std::string &s2)
 {
-	std::ifstream inputFile(filename);
-	std::ofstream outputFile(filename + ".replace");
+	std::ifstream inputFile(filename.c_str());
+	std::ofstream outputFile((filename + ".replace").c_str());
 	ft_error(filename, s1, s2);
 	std::string line;
 	while (std::getline(inputFile, line))
@@ -55,5 +55,4 @@ std::ofstream	ft_replace(std::string &filename, std::string &s1, std::string &s2
 	}
 	inputFile.close();
 	outputFile.close();
-	return (outputFile);
 }
